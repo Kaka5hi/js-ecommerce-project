@@ -86,6 +86,116 @@ header {
   border-radius: 50%;
 }
 
+.sidebar {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #1d1d1d;
+  padding: 20px;
+  transform: translateX(200%);
+  transition: 500ms ease;
+  overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* toggle button for sidebar */
+.sidebar.show {
+  transform: translateX(0);
+  transition: 500ms ease;
+}
+/* toggle button for sidebar */
+
+.sidebar-heading h1 {
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.sidebar-content {
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-content .sidebar-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.sidebar-content .sidebar-item .sidebar-item-img img {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-content .sidebar-item .sidebar-item-detail {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  gap: 20px;
+}
+
+.sidebar-content .sidebar-item .sidebar-item-detail span {
+  font-weight: 700;
+}
+
+.sidebar-content .sidebar-item .sidebar-price {
+  align-self: center;
+}
+
+.sidebar-content .sidebar-item .sidebar-price span {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: 700;
+}
+
+.sidebar .sidebar-btn {
+  position: absolute;
+  top: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.sidebar .total-price {
+  border: 1px solid white;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sidebar .total-price:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  transition: 400ms ease-in-out;
+}
+
 .hero-container {
   display: flex;
   justify-content: center;
