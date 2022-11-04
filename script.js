@@ -4,6 +4,7 @@ const categoryContainer = document.querySelector(".filter-btns") // -> filter bu
 const cartItemContainer = document.querySelector('.sidebar-content') // ->cart item container
 const cartTotalPrice = document.querySelector('.total-price') // ->cost displayed in cart
 const cartItemCount = document.querySelector('.cart-item-count') // -> item count in cart icon by default is 0
+
 // sidebar setup
 const cartBtn = document.querySelector('.cart-open-btn') 
 const sidebarBtn = document.querySelector('.sidebar-btn')
