@@ -29,44 +29,31 @@
                         </svg>
                         <span>1</span>
                     </li>
-                    <li>
+                    <li class="cart-open-btn">
                         <svg class="cart-link" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
                         </path>
                         </svg>
-                        <span>1</span>
+                        <span class="cart-item-count">0</span>
                     </li>
                 </ul>
             </div>
         </nav>
+
         <div class="sidebar">
             <div class="sidebar-heading">
                 <h1>cart item's</h1>
             </div>
 
             <div class="sidebar-content">
-                <!-- item -->
-                <div class="sidebar-item">
-                    <div class="sidebar-item-img">
-                        <img src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="item">
-                    </div>
-                    <div class="sidebar-item-detail">
-                        <span>name of the product</span>
-                        <span>price of the product</span>
-                    </div>
-                    <div class="sidebar-price">
-                        <span>$50</span>
-                    </div>
-                </div>  
-                <!-- item   -->
-                
+               <!-- will be filled by JS  -->
             </div>
 
             <button class="sidebar-btn">x</button>
 
             <div class="total-price">
-                <p>total price: $50</p>
+                <p>total price: $0</p>
             </div>
         </div>
     </header>
@@ -84,7 +71,6 @@
         </div>
     </section>
     
-
     <section class="category-section">
         <div class="category">
             <img src="./images/men-fashion.jpg" alt="men fashion">
@@ -111,11 +97,7 @@
                 </div>
                 <div class="trending-section-heading-right">
                     <ul class="filter-btns">
-                        <li class="filterBtns">All</li>
-                        <li class="filterBtns">electronics</li>
-                        <li class="filterBtns">jewelery</li>
-                        <li class="filterBtns">men's clothing</li>
-                        <li class="filterBtns">women's clothing</li>
+                        <!-- dynamic buttons added via js -->
                     </ul>
                 </div>
             </div>
@@ -123,22 +105,7 @@
 
             <!-- all the products/items -->
             <div class="trending-section-items">
-                <!-- products/items -->
-                <div class="item">
-                    <div class="item-img">
-                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2R1Y3R8ZW58MHx8MHx8&w=1000&q=80" alt="">
-                    </div>
-                    <div class="item-info">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias?</h4>
-                        <span>rs. 1000</span>
-                    </div>
-                    <div class="item-btns">
-                        <button>add to cart</button>
-                        <button>wishlist</button>
-                    </div>
-                </div>
-                <!-- products/items -->
-
+                <!-- dynamically dom populated via JS -->
             </div>
         </div>
     </main>
@@ -238,7 +205,6 @@
     </section>
 
     <!-- testimonial section -->
-
     <section class="testimonial-section">
         <h1>testimonials</h1>
         <div class="testimonials">
@@ -267,7 +233,7 @@
 
     <!-- blog section -->
     <section class="blog-section">
-        <h1>blog section</h1>
+        <h1>Our blog's</h1>
         <div class="blogs">
             <div class="blog">
                 <img src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=600"  alt="electronic products">
