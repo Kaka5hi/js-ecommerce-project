@@ -1,3 +1,10 @@
 # Vanilla js-ecommerce-project
 
-This project is work in progress. Layout is almost completed, functionality will be added soon.
+Tech used
+<br>
+- HTML
+- CSS
+- Javascript
+<br>
+
+Check out the live site <a href="https://ecommerce-site-sm.netlify.app">here</a>
