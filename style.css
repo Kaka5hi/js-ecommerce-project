@@ -187,6 +187,12 @@ header {
   cursor: pointer;
 }
 
+.sidebar .sidebar-btn i {
+  padding: 10px 0;
+  border: none;
+  color: white;
+}
+
 .sidebar .total-price {
   border: 1px solid white;
   margin-top: 20px;
@@ -369,13 +375,14 @@ header {
   justify-items: center;
   gap: 20px;
   padding: 10px;
-  max-width: 1080px;
+  max-width: 1440px;
   margin: 0 auto;
   margin-top: 30px;
+  position: relative;
 }
 
 .trending-section-items .item {
-  box-shadow: 0px 5px 20px 0 rgb(151 151 151 / 50%);
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
   text-transform: uppercase;
@@ -398,20 +405,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 10px;
 }
 .trending-section-items .item h4 {
+  flex: 3;
   padding: 0 20px;
   align-self: flex-start;
   font-weight: 700;
 }
 
 .trending-section-items .item span {
+  flex: 1;
   padding: 0 20px;
-  font-size: 0.75rem;
-  align-self: flex-start;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
@@ -426,7 +432,8 @@ header {
 }
 
 .trending-section-items .item .item-btns button {
-  padding: 10px 20px;
+  flex: 1;
+  padding: 10px;
   background-color: #fff;
   font-family: inherit;
   font-weight: 600;
@@ -719,6 +726,11 @@ header {
   padding: 5px 10px;
 }
 
+.blog-section .blogs .blog:nth-child(2) a {
+  padding: 10px;
+  color: blue;
+}
+
 .blog-section .blogs .blog:nth-child(3) {
   display: flex;
   align-items: center;
@@ -825,8 +837,17 @@ footer .container .copyright p {
 }
 
 @media (max-width: 1024px) {
+  .sidebar {
+    width: 50%;
+  }
+
   .trending-section-items {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-section .blogs .blog:nth-child(1) {
+    flex: 1;
+    text-align: center;
   }
 
   footer .footer-content {
@@ -837,6 +858,31 @@ footer .container .copyright p {
 }
 
 @media (max-width: 768px) {
+  .category-section {
+    flex-direction: column;
+  }
+
+  .trending-section-heading {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .trending-section-heading-left {
+    margin-bottom: 20px;
+  }
+  .trending-section-heading-left h2 {
+    margin-bottom: 0;
+  }
+
+  .trending-section-heading-left p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .trending-section-heading-right .filter-btns li {
+    font-size: 1rem;
+  }
+
   .trending-section-items .item .item-btns button {
     width: 100%;
   }
@@ -844,9 +890,55 @@ footer .container .copyright p {
   .trending-section-items {
     grid-template-columns: repeat(2, 1fr);
   }
+  .trending-section-items .item {
+    animation: fadeIn 1000ms linear normal;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .testimonials {
+    max-width: 600px;
+    flex-direction: column;
+  }
+
+  .blog-section .blogs {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blog-section .blogs .blog:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .blog-section .blogs .blog:nth-child(2) h2,
+  .blog-section .blogs .blog:nth-child(3) h2 {
+    font-size: 1.5rem;
+    padding: 5px 20px;
+  }
+
+  .blog-section .blogs .blog:nth-child(2) p,
+  .blog-section .blogs .blog:nth-child(3) p {
+    padding: 5px 20px;
+    font-size: 1.25rem;
+  }
+
+  .blog-section .blogs .blog:nth-child(2) a {
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 650px) {
+  .sidebar {
+    width: 70%;
+  }
+
   .trending-section-heading {
     flex-wrap: wrap;
     justify-content: center;
@@ -862,6 +954,37 @@ footer .container .copyright p {
 }
 
 @media (max-width: 550px) {
+  .navbar .left-side img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-container .hero-text h1,
+  .hero-container .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .navbar .left-side h1 {
+    font-size: 1rem;
+  }
+
+  .navbar .right-side .links {
+    gap: 20px;
+  }
+
+  .sidebar {
+    width: 80%;
+  }
+
+  .sidebar-content .sidebar-item,
+  .sidebar-content .sidebar-item-info {
+    gap: 10px;
+  }
+
+  .trending-section-heading-right .filter-btns {
+    flex-wrap: wrap;
+  }
+
   .trending-section-items {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -870,5 +993,16 @@ footer .container .copyright p {
   .trending-section-items .item img {
     width: 150px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 425px) {
+  .sidebar {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .sidebar-heading h1 {
+    font-size: 1rem;
   }
 }
